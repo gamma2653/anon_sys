@@ -1,0 +1,5 @@
+[build-system]
+requires = ["setuptools ~= 40.8", "wheel"]
+
+[project]
+name = "anon_sys"
