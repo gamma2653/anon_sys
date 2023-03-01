@@ -1,0 +1,6 @@
+grpcio
+opencv-python
+
+# Speech recognition
+pyaudio
+SpeechRecognition
