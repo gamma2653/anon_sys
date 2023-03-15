@@ -1,4 +1,3 @@
-# Using cv2
 import numpy as np
 import cv2
 
@@ -6,18 +5,18 @@ import speech_recognition as sr
 
 from anon_sys.system import Sensor
 
-class Camera(Sensor):
+class CV2Camera(Sensor):
     device: cv2.VideoCapture
 
     def __init__(self, name, idx: int = 0, *args, **kwargs):
         self._name = name
         self.device = cv2.VideoCapture(idx)
-    
-    def read():
+        self._config = {}
+    def read(self) -> np.ndarray:
         pass
 
-    def config():
-        pass
+    def config(self, kv_map={}, **kwargs):
+        self._config.update(kv_map, **kwargs)
 
     def is_rgb(self, n_samples = 3):
         frame = self.device.read()
@@ -51,5 +50,5 @@ class Camera(Sensor):
         print(frame)
         # self.device.read()
 
-class Microphone(Sensor):
+class SRMicrophone(Sensor):
     device: sr.Microphone()
