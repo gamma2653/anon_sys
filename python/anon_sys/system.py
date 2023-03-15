@@ -107,7 +107,7 @@ class SubsystemData(NamedTuple):
     factory: Factory
 
 
-SYS_CONFIG: Mapping[str, Union[str, Mapping[str, Mapping[str, NamedTuple[]]]]] = {
+SYS_CONFIG: Mapping[str, Union[str, Mapping[str, Mapping[str, NamedTuple]]]] = {
     'name': 'Anon_sys',
     'subsystems': {
         'modules': {
